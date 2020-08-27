@@ -59,7 +59,18 @@ def show_magicians():
 show_magicians()
 
 
-def pizza_toppings():
-  print('A', 'B', 'C', 'D', 'E')
-import pizza_toppings as pt
-pt
+pizza_toppings = []
+def make_pizza(size, pizza_toppings):
+  print('\nMaking a -' + str(size) + 'inch pizza with the following toppings:' + pizza_topping)
+
+for pizza_topping in pizza_toppings:
+  print('- ' + pizza_topping)
+
+import make_pizza as mp
+mp.make(16, 'pepperoni')
+mp.make(12, 'ketchup')
+
+import make_pizza as mp
+mp.clear()
+
+
