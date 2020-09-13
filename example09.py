@@ -38,34 +38,6 @@ class User():
     def feed_food(self, food_type):
         self.take_food = food_type
 
-your_user = User('G', 'H', 'Male')
-long_name = "abc"
-print("Hello", your_user.get_descriptive_name())
-print ("This is test:", long_name)
-your_user.greet_user()
-
-my_user = User('L', 'L', 'Male')
-
-my_user.login_attempts()
-my_user.login_attempts()
-my_user.login_attempts()
-my_user.login_attempts()
-my_user.display()
-
-import matplotlib.pyplot as mplt
-import numpy as np
-t = np.arange(0., 5., 0.2)
-mplt.plot(t, t, 'r--', t, t**0.5, 'bs', t, t**(1/3), 'g^')
-mplt.show()
-
-class Light():
-    def __init__(self, size, flexibility, battery_size):
-        self.size = size
-        self.flexibility = flexibility
-        self.battery_size = 800
-
-    def get_descriptive(self):
-        self.size
 
 class Coordinates():
     def __init__(self, x, y, z):
@@ -74,5 +46,41 @@ class Coordinates():
         self.z = -123
         self.position = 48, 78, -123
 
-    def actual_position():
+    def actual_position(self):
         print('The actual position of yourself is' + str(self.position) + '.')
+
+#2020/9/7
+class Absolute_direction():
+    def __init__(self, x, y, z):
+        self.x = float(input('Please evaluate:'))
+        self.y = float(input('Please evaluate:'))
+        self.z = float(input('Please evaluate:'))
+        self.position = self.x + self.y + self.z
+        self.search_location_time = 0
+        self.location_closest_player = (x, y, z)
+
+    def locate(self):
+        print('The location of yours is ' + str(self.x) + ', ' + str(self.y) + ', ' + str(self.z) + '.')
+
+    def search_location_times(self):
+        self.search_location_time += 1
+        print('The times you have been searching is:' + str(self.search_location_time))
+
+    def location_closest_players(self):
+        number_of_players = input('Please enter number of players: ')
+        if int(number_of_players) <= 1:
+                    self.location_closest_player = str(self.x) + ' ' + str(self.y) + ' ' + str(self.z)
+                    print(self.location_closest_player)
+        else:
+            print('Sorry, but there are multiple players in the zone.')
+
+inst1 = Absolute_direction(x = 12.3, y = 2.5, z = 7.6)
+inst2 = Absolute_direction(x = 0.0, y = 0.0, z = 0.0)
+inst1.locate()
+inst1.location_closest_players()
+inst1.search_location_times()
+inst2.locate()
+inst2.location_closest_players()
+inst2.search_location_times()
+
+

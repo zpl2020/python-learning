@@ -46,5 +46,32 @@ if __name__ == '__main__':
    a = input('Enter a number: ')
    multi_table(float(a))
 
+your_user = User('G', 'H', 'Male')
+long_name = "abc"
+print("Hello", your_user.get_descriptive_name())
+print ("This is test:", long_name)
+your_user.greet_user()
 
+my_user = User('L', 'L', 'Male')
+
+my_user.login_attempts()
+my_user.login_attempts()
+my_user.login_attempts()
+my_user.login_attempts()
+my_user.display()
+
+import matplotlib.pyplot as mplt
+import numpy as np
+t = np.arange(0., 5., 0.2)
+mplt.plot(t, t, 'r--', t, t**0.5, 'bs', t, t**(1/3), 'g^')
+mplt.show()
+
+class Light():
+    def __init__(self, size, flexibility, battery_size):
+        self.size = size
+        self.flexibility = flexibility
+        self.battery_size = 800
+
+    def get_descriptive(self):
+        self.size
 
