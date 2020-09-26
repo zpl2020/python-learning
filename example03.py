@@ -55,7 +55,7 @@ print("本地时间为 :", localtime)
 
 
 import calendar
- cal = calendar.month(2019, 2)
+cal = calendar.month(2019, 2)
 print ("以下输出2019年2月份的日历:")
 print (cal)
 

@@ -23,7 +23,7 @@ if choice == '2':
   miles_km ()
 
  
-  def print_menu():
+  def print_menu1():
     print ('1. kmph to mph')
     print ('2. mph to kmph')
   def kmph_mph():

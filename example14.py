@@ -1,5 +1,4 @@
 from random import randint
-x = randint(1, 6)
 
 class Dice():
     def __init__(self):
@@ -35,17 +34,8 @@ class Dice():
         print ('Side 5: ' + str(self.count_on_side5))
         print ('Side 6: ' + str(self.count_on_side6))
 
-inst1 = Dice()
-
-for value in range(0, 100):
-    x = randint(1, 6)
-    inst1.roll_die(x)
-
-inst1.print_sides()
-
-
-from random import randint
-x = randint(1,2)
+def complex_calculation(a, b, c, d):
+    return a**(1/3) + b * (c - d)
 
 class Coin():
     def __init__(self):
@@ -53,3 +43,14 @@ class Coin():
 
     def flip_coin(self, x):
         self.face = x
+
+if __name__ == '__main__':
+    x = randint(1, 6)
+    inst1 = Dice()
+
+    for value in range(0, 100):
+        x = randint(1, 6)
+        inst1.roll_die(x)
+
+    inst1.print_sides()
+    x = randint(1,2)

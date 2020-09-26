@@ -5,19 +5,25 @@ def is_factor(a, b):
     return False
 
 print(is_factor(11, 3))
-def is_factor(x, y):
+def is_factor2(x, y):
  if y == x**2 - x*2:
    return True
  else:
   return False
-print (is_factor(3,0))
+print (is_factor2(3,0))
+
+
 
 from fractions import Fraction
 a = Fraction(input('enter a number:'))
 print (a)
 
+
+
 z = complex(input('Enter a complex number: '))
 print (z)
+
+
 
 for i in range (-10, 10):
     print (i)
