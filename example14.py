@@ -34,23 +34,22 @@ class Dice():
         print ('Side 5: ' + str(self.count_on_side5))
         print ('Side 6: ' + str(self.count_on_side6))
 
-def complex_calculation(a, b, c, d):
-    return a**(1/3) + b * (c - d)
+
 
 class Coin():
-    def __init__(self):
+    def __init__(self, count_on_face, face):
         self.face = 2
-
+        self.count_on_face1 = 0
+        self.count_on_face2 = 0
+   
     def flip_coin(self, x):
         self.face = x
-
-if __name__ == '__main__':
-    x = randint(1, 6)
-    inst1 = Dice()
-
-    for value in range(0, 100):
-        x = randint(1, 6)
-        inst1.roll_die(x)
-
-    inst1.print_sides()
-    x = randint(1,2)
+        print(self.face)
+        if x == 1:
+            self.count_on_face1 += 1
+        elif x ==2:
+            self.count_on_face2 += 1
+    
+    def print_faces(self):
+        print ('Face 1: ' + str(self.count_on_face1))
+        print ('Face 2: ' + str(self.count_on_face2))

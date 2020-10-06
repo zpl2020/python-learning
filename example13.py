@@ -9,7 +9,7 @@ myOrderedDict['D'] = 'c'
 for name, language in myOrderedDict.items():
     print(name.title() + "'s favourite language is " + language.title() + '.')
 
-
+from random import randint
 class Coin_flip():
     from random import randint
     def __init__(self, sides, flip_attempts):
